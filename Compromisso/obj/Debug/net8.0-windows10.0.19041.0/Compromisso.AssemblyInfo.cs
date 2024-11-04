@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Compromisso")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de211531847361e7252853bf1c2c12bf88e3cbbb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6cae343d8b8fb30e16424f7da43fe7000cf63021")]
 [assembly: System.Reflection.AssemblyProductAttribute("Compromisso")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Compromisso")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

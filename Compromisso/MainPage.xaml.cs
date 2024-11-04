@@ -11,9 +11,8 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-	private void OnSalvarClicked(object sender, EventArgs e) {
+	private void OnCadastrarClicked(object sender, EventArgs e) {
 		Models.Usuario usuario = new();
-		Models.Compromisso compromisso = new();
 
 		usuario.UsuarioId = count;
 		count ++;

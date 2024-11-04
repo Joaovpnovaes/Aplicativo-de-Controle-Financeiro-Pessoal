@@ -19,7 +19,9 @@ public class Usuario
         Cpf = cpf;
         Senha = senha;
     }
-    public List<Transacao> Transacoes { get; set; }
 
+    public Usuario()
+    {
+    }
 
 }

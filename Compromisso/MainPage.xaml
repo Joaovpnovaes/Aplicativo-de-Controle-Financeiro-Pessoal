@@ -1,18 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Compromisso.MainPage">
+             x:Class="GerenciamentoFinanceiroPessoal.UserRegistrationPage"
+             BackgroundColor="White"
+             Title="Cadastro de Usuário">
 
-    <StackLayout Padding="20">
-        <!-- <Label Text="Data"/> -->
-        <Entry x:Name="DataEntry" Placeholder="Digite uma Data" />
-        <Entry x:Name="HoraEntry" Placeholder="Digite uma Hora" />
-        <Entry x:Name="LocalEntry" Placeholder="Digite um Local" />
-        <Entry x:Name="DescricaoEntry" Placeholder="Digite uma Descrição" />
+    <ScrollView>
+        <StackLayout Padding="20">
 
-        <Button Text="Salvar" Clicked="OnSalvarClicked" />
+            <!-- Imagem de Logo -->
+            <Image Source="logo.png" HorizontalOptions="Center" WidthRequest="90" />
 
-        <Label x:Name="ResultadoLabel" />
-    </StackLayout>
+            <!-- Campos de entrada para os dados do usuário -->
+            <Entry x:Name="NomeEntry" Placeholder="Digite seu Nome" TextColor="{StaticResource EntryTextColor}" />
+            <Entry x:Name="EmailEntry" Placeholder="Digite seu Email" TextColor="{StaticResource EntryTextColor}" Keyboard="Email" />
+            <Entry x:Name="CpfEntry" Placeholder="Digite seu CPF" TextColor="{StaticResource EntryTextColor}" Keyboard="Numeric" />
+            <Entry x:Name="SenhaEntry" Placeholder="Digite sua Senha" TextColor="{StaticResource EntryTextColor}" IsPassword="True" />
+            <Entry x:Name="ConfirmarSenhaEntry" Placeholder="Confirme sua Senha" TextColor="{StaticResource EntryTextColor}" IsPassword="True" />
 
+            <!-- Botão de Cadastro -->
+            <Button Text="Cadastrar" BackgroundColor="#007bff" TextColor="White" CornerRadius="25" Clicked="OnCadastrarClicked" />
+
+            <!-- Label de Resultado -->
+            <Label x:Name="ResultadoLabel" TextColor="Gray" FontAttributes="Italic" Margin="0,20,0,0" HorizontalOptions="Center" />
+
+            <!-- Rodapé com Mensagem de Copyright -->
+            <Label Text="© 2024 RAJ contribuições" FontSize="Small" HorizontalOptions="Center" TextColor="Gray" Margin="0,20,0,0" />
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

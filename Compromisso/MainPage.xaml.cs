@@ -1,27 +1,27 @@
 ﻿using Models;
 
-namespace GerenciamentoFinanceiroPessoal;
+namespace Compromisso;
 
-public partial class UserRegistrationPage : ContentPage
+public partial class MainPage : ContentPage
 {
-    public UserRegistrationPage()
-    {
-        InitializeComponent();
-    }
+	int count = 0;
 
-    private void OnCadastrarClicked(object sender, EventArgs e)
-    {
-        // Cria um novo objeto Usuario com os dados preenchidos
-        Usuario usuario = new Usuario
-        {
-            Nome = NomeEntry.Text,
-            Email = EmailEntry.Text,
-            Cpf = CpfEntry.Text,
-            Senha = SenhaEntry.Text
-        };
+	public MainPage()
+	{
+		InitializeComponent();
+	}
 
-        // Captura as senhas para verificação
-        string senha = SenhaEntry.Text;
+	private void OnSalvarClicked(object sender, EventArgs e) {
+		Models.Usuario usuario = new();
+		Models.Compromisso compromisso = new();
+
+		usuario.UsuarioId = count;
+		count ++;
+		usuario.Nome =  NomeEntry.Text;
+		usuario.Senha = SenhaEntry.Text;
+		usuario.Cpf = CpfEntry.Text;
+		usuario.Email = EmailEntry.Text;
+		string senha = SenhaEntry.Text;
         string confirmarSenha = ConfirmarSenhaEntry.Text;
 
         // Verifica se a senha e a confirmação coincidem
